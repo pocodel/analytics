@@ -1,0 +1,111 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    background: $white;
+}
+
+.no-scroll{
+    overflow: hidden;
+}
+
+.body{
+    background: $body;
+}
+
+.wrap{
+    @include width(335px, 1180px, 0px, 15px);
+}
+
+p,
+a{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+    color: $text---secondary;
+    margin: 0;
+}
+
+h1{
+    color: $white;
+}
+h2,
+h3{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: $dark-blue;
+    margin: 0;
+}
+
+button{
+    color: $white;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.burger{
+    position: relative;
+    display: none;
+    width: 24px;
+    height: 18px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    user-select: none;
+
+
+
+    &--active{
+
+        .burger__line:nth-child(2){
+            opacity: 0;
+        }
+
+        .burger__line:first-child{
+            transform: rotate(45deg);
+            top: 50%;
+            
+        }
+
+        .burger__line:last-child{
+            transform: rotate(-45deg);
+            top: 50%;
+        }
+    }
+    
+
+    &__line{
+        position: absolute;
+        width: 24px;
+        height: 3px;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $text---secondary;
+        transform: translateX(0%);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+
+
+        &:first-child{
+            top: 0;
+        }
+
+        &:nth-child(2){
+            top: 9px;
+        }
+
+        &:last-child{
+            top: 18px;
+        }
+    }
+}
+

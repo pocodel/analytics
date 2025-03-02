@@ -1,0 +1,17 @@
+@mixin width($min-width, $max-width, $p-y, $p-x) {
+    min-width: $min-width;
+    max-width: $max-width + $wrap-indent;
+    padding: $p-y $p-x;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+@mixin btn ($bd-color, $bg-color, $bdrs, $color, $font-size, $p-y, $p-x){
+    border: 1px solid $bd-color;
+    background-color: $bg-color;
+    border-radius: $bdrs;
+    color: $color;
+    font-size: $font-size;
+    padding: $p-y $p-x;
+    cursor: pointer;
+}

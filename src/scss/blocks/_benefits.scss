@@ -1,0 +1,66 @@
+
+.benefits{
+    padding-top: 38px;
+
+    &__info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 80px;
+
+    &-title{
+        font-size: 40px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    &-desc{
+        font-size: 18px;
+        line-height: 150%;
+        max-width: 1060px;
+        text-align: center;
+    }
+}
+
+    &__cards{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 60px;
+
+    .benefits__card{
+        grid-column: span 4;
+        display: flex;
+        flex-direction: column;
+        padding-top: 86px;
+        background-position: top;
+        background-size: 60px 60px;
+        background-repeat: no-repeat;
+
+        &-title{
+            font-size: 16px;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        &-desc{
+            font-size: 16px;
+            line-height: 140%;  
+            text-align: center;
+        }
+    }
+
+}
+
+    .benefits__card--time{
+        background-image: url(/public/images/svg/pink-time.svg);
+    }
+
+    .benefits__card--display{
+        background-image: url(/public/images/svg/pink-display.svg);
+    }
+
+    .benefits__card--rocket{
+        background-image: url(/public/images/svg/pink-rocket.svg);
+    }
+
+}

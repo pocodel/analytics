@@ -1,0 +1,430 @@
+@media (max-width: 1224px) {
+	.plans__cards{
+		overflow-x: auto;
+
+			&::-webkit-scrollbar{
+					display: none;
+			}
+	}
+	.plans__card{
+
+
+			&:first-child{
+				margin-left: $wrap-indent;
+			}
+
+			&:last-child{
+				margin-right: $wrap-indent;
+			}
+	}
+}
+
+@media (max-width: 1130px) {
+
+
+	.content{
+		padding-top: 80px;
+
+		&__article{
+			display: block;
+			padding-bottom: 50px;
+			
+		}
+
+		&__info{
+			align-items: center;
+			text-align: center;
+			padding: 50px 0;
+
+				&-title{
+					max-width: 100%;
+				}
+
+				&-desc{
+					max-width: 100%;
+				}
+		}
+
+		&__img{
+			display: block;
+			margin: 0 auto;
+		}
+
+	}
+}
+
+@media (max-width: 1000px) {
+
+	.wrap{
+		@include width(335px, 1180px, 0px, 20px);
+	}
+
+	.intro-analytics{
+		padding-top: 0;
+
+		&::after{
+			clip-path: polygon(0 0, 100% 0, 100% 80%, 0 90%);
+		}
+
+		&::before{
+			clip-path: polygon(0 0, 100% 0, 100% 80%, 0 90%);
+		}
+	}
+
+	.header{
+		justify-content: space-between;
+		box-shadow: 0 4px 4px 0 #12214d;
+		background: $dark-blue;
+		padding: 29px 0;
+		margin-left: -20px;
+		margin-right: -20px;
+		padding-left: 20px;
+		padding-right: 20px;
+
+		&__menu{
+			position: fixed;
+			left: 0;
+			top: 0;
+			z-index: 100;
+			width: 100%;
+			height: 100%;
+			overflow-y: auto;
+			visibility: hidden;
+			transform: translateX(-100%);
+			transition: visibility 0.3s ease, transform 0.3s ease;
+			background: linear-gradient($dark-blue, $light-blue);
+			padding: 40px 30px;
+
+				&--active{
+					visibility: visible;
+					transform: none;
+				}
+
+				&-list{
+					display: block;
+				}
+
+				&-item{
+					font-size: 40px;
+					font-weight: 700;
+					margin-bottom: 30px;
+				}
+			}
+
+		&__btns--circled{
+			display: none;
+		}
+
+		&__btns--transparent{
+			@include btn(transparent, transparent, 68px, $text---secondary, 16px, 5px, 10px);
+			margin-right: 8px;
+			margin-top: 5px;
+		}
+
+	}
+
+	.btn--theme-dark:active, .btn--theme-dark:focus{
+		@include btn (none, $light-blue, 68px, $text---secondary, 16px, 5px, 10px);
+		opacity: .7;
+	}
+
+	.burger{
+		display: block;
+		margin-top: auto;
+		margin-bottom: auto;
+	}
+
+	
+	.dashboard{
+		justify-content: center;
+		align-items: center;
+		padding-top: 29px;
+		padding-bottom: 200px;
+		gap: 26px;
+		flex-direction: column-reverse;
+		
+		&__pic{
+			
+			&-img{
+				display: block;
+			}
+			&::before{
+				display: none;
+			}
+		}
+
+		&__info{
+			padding-right: 0;
+
+			&-title{
+				margin-top: 0;
+
+				&::before{
+					clip-path: polygon(0 0, 100% 0, 100% 32%, 0 46%);
+				}
+			}
+
+			&-btn{
+				width: 100%;
+				height: 50px;
+			}
+		}
+
+
+		&__pic::before{
+			width: 50vh;
+			height: 35vh;
+
+			background-size: cover;
+			left: -486px;
+        	top: -459px;
+		}
+	}
+
+	.benefits{
+		padding-top: 0;
+	}
+
+	.plans__card--white{
+		
+		.plans__card-btn{
+			width: 200px;
+		}
+	}
+}
+
+@media (max-width: 760px) {
+
+	.intro-analytics{
+		&::after{
+			clip-path: polygon(0 0, 100% 0, 100% 88%, 0 94%);
+		}
+
+		&::before{
+			clip-path: polygon(0 0, 100% 0, 100% 88%, 0 94%);
+		}
+	}
+
+	
+	.header{
+		padding: 20px;
+
+		&__logo{
+			margin-right: 0;
+		}
+	}
+
+	.dashboard{
+		padding-top: 29px;
+		padding-bottom: 127px;
+		flex-direction: column-reverse;
+		gap: 26px;
+
+		&__pic{
+			
+			&-img{
+				display: block;
+			}
+			&::before{
+				display: none;
+			}
+		}
+
+		&__info{
+
+			&-title{
+				font-size: 31px;
+				line-height: 120%;
+
+				&::after{
+					display: none;
+				}
+
+				&::before{
+					display: none;
+				}
+			}
+
+			&-desc{
+				font-size: 18px;
+				line-height: 150%;
+				margin-bottom: 26px;
+			}
+		}
+	}
+
+
+	.benefits{
+
+		&__info{
+			padding-top: 20px;
+			text-align: left;
+			align-items: flex-start;
+			padding-bottom: 40px;
+
+			&-title{
+				font-size: 30px;
+				margin-bottom: 20px;
+				text-align: left;
+			}
+
+			&-desc{
+				font-size: 14px;
+				line-height: 140%;
+				text-align: left;
+			}
+		}
+
+		.benefits__cards{
+			grid-template-columns: repeat(10, 1fr);
+			gap: 35px;
+
+			.benefits__card{
+				grid-column: span 10;
+				padding-top: 0;
+				padding-left: 86px;
+				background-position: left;
+
+				&-title{
+					font-size: 16px;
+					text-align: left;
+					margin-bottom: 10px;
+				}
+
+				&-desc{
+					text-align: left;
+					font-size: 14px;
+					line-height: 140%;
+					height: 60px;
+				}
+			}
+		}
+	}
+
+	.content{
+		padding: 70px 0;
+
+		&__article{
+			padding-bottom: 60px;
+		}
+
+		&__info{
+			padding-top: 0;
+			padding-bottom: 30px;
+			align-items: normal;
+
+			&-title{
+				font-size: 30px;
+				margin-bottom: 20px;
+				text-align: left;
+			}
+
+			&-desc{
+				font-size: 14px;
+				line-height: 140%;
+				text-align: left;
+			}
+		}
+
+		&__img{
+			width: 335px;
+			height: 228px;
+		}
+	}
+
+	.plans{
+		padding-top: 132px;
+
+		&::after{
+			clip-path: polygon(0 9%, 100% 4%, 100% 100%, 0 100%);
+		}
+
+		&::before{
+			clip-path: polygon(0 9%, 100% 4%, 100% 100%, 0 100%);
+		}
+
+		&__title{
+			padding: 0 20px;
+			font-size: 30px;
+			text-align: left;
+			margin-bottom: 20px;
+		}
+
+		&__desc{
+			padding: 0 20px;
+			text-align: left;
+			font-size: 14px;
+			line-height: 140%;
+			padding-bottom: 59px;
+		}
+
+		&__cards{
+			gap: 20px;
+			padding-bottom: 44px;
+		}
+
+		&__card{
+			width: 280px;
+			height: 358px;
+			background-color: $white;
+
+			&-title{
+				color: $dark-blue;
+				font-size: 25px;
+			}
+
+			&-users{
+				font-size: 13px;
+				border-bottom: 1px solid $border-white;
+				padding-bottom: 30px;
+			}
+
+			&-price{
+
+				&--count{
+					font-size: 50px;
+					color: $dark-blue;
+				}
+
+				&--sign{
+					font-size: 25px;
+					color: $dark-blue;
+				}
+			}
+
+			&-btn{
+				@include btn(none, $red, 68px, $white, 16px, 10px, 80px);
+				transition: $trans;
+				border: none;
+				width: 206px;
+				margin-bottom: 47px;
+			
+				&:active, &:focus{	
+					outline: $outline;
+					transition: $trans-1s;
+					@include btn(none, $red-pink, 68px, $white, 16px, 10px, 80px);
+				}
+				
+			}
+
+			.plans__card-btn--pink{
+				width: 206px;
+				margin-bottom: 47px;
+			}
+		}
+	}
+
+	.footer__content{
+		padding: 45px 0;
+		justify-content: space-between;
+	}
+
+	.content__nav{
+		display: none;
+	}
+
+	.social{
+		margin-top: auto;
+	}
+
+}
